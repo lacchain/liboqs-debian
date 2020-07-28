@@ -1,0 +1,25 @@
+liboqs (0.3.0) experimental; urgency=low
+
+  * New upstream version
+  * Key encapsulation mechanisms
+    - BIKE: Update to Round 2 submission; removes BIKE2-*, BIKE3-*, BIKE1-L5,
+      renames BIKE1-L1 and BIKE1-L3 to BIKE1-L1-CPA and BIKE1-L3-CPA, and adds BIKE1-L1-FO and BIKE-L3-FO
+    - Classic McEliece: Newly added
+    - Kyber: Add "90s variants": Kyber512-90s, Kyber768-90s, Kyber1024-90s
+    - LEDAcrypt: Newly added
+    - ThreeBears: Newly added
+  * Digital signature schemes
+    - Falcon: Newly added
+    - MQDSS: Update to v2.1
+    - Picnic: Update to v2.2
+    - qTesla: Update to v1.0
+    - Rainbow: Newly added
+    - SPHINCS+: Add AVX2 and AESNI implementations
+  * Other changes
+    - Switch build system to CMake
+    - Add support for building via Mingw on Windows
+    - Support cross compilation via CMake to Raspberry Pi, Android, Windows, and more
+    - Most optimizations dependent on specific CPU features are automatically detected at runtime,
+      rather than being selected at compile-time
+
+ -- Diego López León <diegol@iadb.org>  Wed, 15 Jul 2020 13:40:00 +0000
