@@ -8,7 +8,6 @@ Vcs-Browser: https://github.com/open-quantum-safe/liboqs/
 Vcs-Git: https://github.com/open-quantum-safe/liboqs.git
 
 Package: liboqs
-Section: libs
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
@@ -19,3 +18,21 @@ Description: Open source library for quantum-safe cryptographic algorithms.
  cryptography to facilitate deployment and testing in real world contexts.
  .
  In particular, OQS provides prototype integrations of liboqs into TLS and SSH, through OpenSSL and OpenSSH.
+ .
+ This package contains the shared library object.
+
+Package: liboqs-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}, liboqs (= ${binary:Version})
+Description: Open source library for quantum-safe cryptographic algorithms.
+ This package is part of the Open Quantum Safe (OQS) project led by Douglas Stebila
+ and Michele Mosca, which aims to develop and integrate into applications quantum-safe
+ cryptography to facilitate deployment and testing in real world contexts.
+ .
+ In particular, OQS provides prototype integrations of liboqs into TLS and SSH, through OpenSSL and OpenSSH.
+ .
+ This package provides development files.
+
