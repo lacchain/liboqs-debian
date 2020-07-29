@@ -28,7 +28,7 @@ RUN echo '#!/bin/sh\n\
 set -x\n\
 cd /build/liboqs-0.3.0\n\
 debuild -b -uc -us -nc\n\
-mv ../liboqs_0.3.0_amd64.deb /output\n'\
+mv ../*.deb /output\n'\
 >> /run.sh
 
 RUN chmod +x /run.sh
