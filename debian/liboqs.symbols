@@ -1,0 +1,3 @@
+liboqs.so.0 liboqs #MINVER#
+* Build-Depends-Package: liboqs-dev
+
