@@ -1,24 +1,36 @@
---- a/CMakeLists.txt
-+++ b/CMakeLists.txt
-@@ -43,6 +43,8 @@ include(.CMake/compiler_opts.cmake)
+Description: Follow GNU standard installation directories
+Author: Diego López León <diegol@iadb.org>
+Origin: other
+Last-Update: 2020-08-18
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: liboqs-0.4.0/CMakeLists.txt
+===================================================================
+--- liboqs-0.4.0.orig/CMakeLists.txt
++++ liboqs-0.4.0/CMakeLists.txt
+@@ -38,6 +38,8 @@ endif()
+ include(.CMake/compiler_opts.cmake)
  
  include(.CMake/alg_support.cmake)
- 
 +include(GNUInstallDirs)
 +
  if(OQS_USE_OPENSSL)
      if(NOT DEFINED OPENSSL_ROOT_DIR)
          if(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Darwin")
---- a/src/CMakeLists.txt
-+++ b/src/CMakeLists.txt
-@@ -94,8 +94,8 @@ set_target_properties(oqs
+Index: liboqs-0.4.0/src/CMakeLists.txt
+===================================================================
+--- liboqs-0.4.0.orig/src/CMakeLists.txt
++++ liboqs-0.4.0/src/CMakeLists.txt
+@@ -98,9 +98,9 @@ set_target_properties(oqs
  add_library(OQS::oqs ALIAS oqs)
  
  install(TARGETS oqs
 -        LIBRARY DESTINATION lib
--        ARCHIVE DESTINATION lib)
+-        ARCHIVE DESTINATION lib
+-	RUNTIME DESTINATION bin)
 +        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-+        ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
++        ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
++	RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
  
  install(FILES ${PUBLIC_HEADERS}
          DESTINATION include/oqs)
