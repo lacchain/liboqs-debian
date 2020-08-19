@@ -1,3 +1,18 @@
+liboqs (0.4.0) experimental; urgency=low
+
+  * New upstream version
+  * Key encapsulation mechanisms
+    - HQC: Added version 2019/08/24
+    - NewHope: Update to version 1.1
+    - SIKE: Update to version 3.3
+  * Digital signature schemes
+    - Dilithium: Use version directly from PQCrystals GitHub
+    - Picnic: Update to v3.0
+  * Other changes
+    - AES-NI support when liboqs does not use OpenSSL for AES
+
+ -- Diego López León <diegol@iadb.org>  Tue, 18 Aug 2020 21:46:36 +0000
+
 liboqs (0.3.0) experimental; urgency=low
 
   * New upstream version
